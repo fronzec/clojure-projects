@@ -1,1 +1,1 @@
-# clojure-projects
+# Example projects made in clojure
