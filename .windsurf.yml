@@ -1,0 +1,26 @@
+# Windsurf Project Guidelines
+# For documentation, see: https://docs.windsurf.com/guidelines
+
+# Example: Enable Conventional Commits enforcement
+conventional_commits: true
+
+# Example: Set minimum code review approvals
+min_code_review_approvals: 1
+
+# Example: Recommended file patterns to ignore (for Windsurf-specific tooling)
+ignore:
+  - .windsurf/
+  - .clj-kondo/
+  - .lsp/
+  - .cpcache/
+  - .DS_Store
+
+# Example: Enable linting checks (customize as needed)
+lint:
+  enabled: true
+  tools:
+    - clj-kondo
+    - leiningen
+
+# Example: Documentation guidelines
+require_readme: true
