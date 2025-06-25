@@ -1,0 +1,69 @@
+# Clojure / Leiningen
+/.lein-failures
+/.lein-deps-sum
+/.nrepl-port
+/target/
+/classes/
+/checkouts/
+/.cpcache/
+/.lsp/
+
+# VSCode
+.vscode/
+.history/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# Windsurf
+.windsurf/
+
+# Cursor
+.cursor/
+
+# clj-kondo
+.clj-kondo/
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Clojure test output
+/test-output/
+/coverage/
+/coverage-results/
+
+# ClojureScript
+/.cljs-routes/
+/.shadow-cljs/
+/.cljs-cache/
+
+# REPL history
+.repl-history
+
+# Leiningen profiles
+/profiles.clj
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# Clojure LSP server
+/.lsp/
+
+# Clojure Spec test output
+/.spec-tests/
+
+# ClojureScript build output
+/resources/public/js/compiled/
+
+# Miscellaneous
+*.bak
+*.tmp
