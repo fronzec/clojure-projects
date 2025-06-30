@@ -6,7 +6,7 @@
 (defn imaginary [[a b]] ;; arglist goes here
   b)
 
-(defn abs [[a b]] ;; <- arglist goes here
+(defn absolute [[a b]] ;; <- arglist goes here
   (Math/sqrt (+ (Math/pow a 2) (Math/pow b 2)))
   )
 
