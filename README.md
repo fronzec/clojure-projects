@@ -4,6 +4,11 @@ This repository contains a collection of projects written in the Clojure program
 
 > **Note:** This is a personal project created for the purpose of learning and experimenting with Clojure.
 
+## Projects
+
+- **hello-world**: A basic Clojure project to print "Hello, World!" and demonstrate project structure and setup.
+- **learning-clj**: A more advanced project for experimenting with various Clojure features and libraries, used as a playground for deeper learning.
+
 ## Repository Status
 
 As of June 29, 2025, the repository is actively maintained. New projects and improvements are added periodically. Please refer to each project directory for specific details and their current development status.
