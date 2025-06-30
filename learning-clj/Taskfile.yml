@@ -1,0 +1,137 @@
+version: '3'
+
+vars:
+  PROJECT_NAME: learning-clojure
+
+tasks:
+  default:
+    desc: "Show help with all available commands"
+    cmds:
+      - task --list-all
+    silent: true
+
+  run:
+    desc: "Execute a specific algorithm (usage: task run -- namespace.algorithm)"
+    cmds:
+      - lein run -m {{.CLI_ARGS | default "learning-clojure.difference-of-squares"}}
+    sources:
+      - "src/**/*.clj"
+      - "project.clj"
+
+  run-difference:
+    desc: "Execute the difference of squares algorithm"
+    cmds:
+      - lein run -m learning-clojure.difference-of-squares
+
+  run-core:
+    desc: "Execute the main entry point (shows available algorithms)"
+    cmds:
+      - lein run -m learning-clojure.core
+
+  demo-squares:
+    desc: "Demo different ways to implement square functions"
+    cmds:
+      - lein run -m learning-clojure.difference-of-squares
+
+  test-complex:
+    desc: "Run tests for complex numbers module"
+    cmds:
+      - echo "Testing complex numbers operations..."
+      - lein test learning-clojure.complex-numbers-test
+
+  test-robot:
+    desc: "Run tests for robot simulator module"
+    cmds:
+      - echo "Testing robot simulator operations..."
+      - lein test learning-clojure.robot-simulator-test
+
+  test-log-levels:
+    desc: "Run tests for log levels module"
+    cmds:
+      - echo "Testing log levels functionality..."
+      - lein test learning-clojure.log-levels-test
+
+  demo-robot:
+    desc: "Demo robot simulator with sample instructions"
+    cmds:
+      - echo "Running robot simulator demo..."
+      - lein run -m learning-clojure.core robot-simulator
+
+  demo-log-levels:
+    desc: "Demo log levels parsing and reformatting"
+    cmds:
+      - echo "Running log levels demo..."
+      - lein run -m learning-clojure.core log-levels
+
+  repl:
+    desc: "Open interactive Clojure REPL"
+    cmds:
+      - lein repl
+
+  check:
+    desc: "Check code syntax without executing"
+    cmds:
+      - lein check
+
+  compile:
+    desc: "Compile project to JVM bytecode"
+    cmds:
+      - lein compile
+
+  clean:
+    desc: "Clean compiled and temporary files"
+    cmds:
+      - lein clean
+
+  test:
+    desc: "Run project tests"
+    cmds:
+      - lein test
+
+  uberjar:
+    desc: "Create standalone executable JAR"
+    cmds:
+      - lein uberjar
+    generates:
+      - "target/{{.PROJECT_NAME}}-*-standalone.jar"
+
+  install:
+    desc: "Install project to local Maven repository"
+    cmds:
+      - lein install
+
+  deps:
+    desc: "Download and verify all dependencies"
+    cmds:
+      - lein deps
+
+  new:
+    desc: "Create new Clojure project"
+    cmds:
+      - lein new app {{.CLI_ARGS}}
+
+  build:
+    desc: "Complete build process"
+    deps: [clean]
+    cmds:
+      - task: compile
+      - task: uberjar
+      - echo "✅ Build completed. JAR available in target/"
+
+  setup:
+    desc: "Initial project setup"
+    cmds:
+      - echo "🔧 Setting up project {{.PROJECT_NAME}}..."
+      - task: deps
+      - echo "✅ Project configured successfully"
+      - echo "💡 Use 'task run' to execute the program"
+
+  info:
+    desc: "Show project and environment information"
+    cmds:
+      - echo "📊 Project Information"
+      - echo "  Name {{.PROJECT_NAME}}"
+      - echo "  Directory $(pwd)"
+      - lein version
+      - echo "🔍 Main files"
+      - ls -la *.clj project.clj 2>/dev/null || echo "  No .clj files found" 
