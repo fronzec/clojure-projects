@@ -63,6 +63,12 @@ tasks:
       - echo "Running log levels demo..."
       - lein run -m learning-clojure.core log-levels
 
+  demo-raindrops:
+    desc: "Demo raindrops algorithm (Pling, Plang, Plong)"
+    cmds:
+      - echo "Running raindrops demo..."
+      - lein run -m learning-clojure.core raindrops
+
   repl:
     desc: "Open interactive Clojure REPL"
     cmds:
@@ -134,4 +140,4 @@ tasks:
       - echo "  Directory $(pwd)"
       - lein version
       - echo "🔍 Main files"
-      - ls -la *.clj project.clj 2>/dev/null || echo "  No .clj files found" 
+      - ls -la *.clj project.clj 2>/dev/null || echo "  No .clj files found"

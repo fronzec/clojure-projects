@@ -1,69 +1,75 @@
-# Clojure / Leiningen
-/.lein-failures
-/.lein-deps-sum
-/.nrepl-port
+# Clojure build artifacts
 /target/
 /classes/
-/checkouts/
-/.cpcache/
-/.lsp/
+/lib/
+/.lein-*
+/.nrepl-*
+pom.xml
+pom.xml.asc
+*.jar
+*.class
+.cpcache/
+.socket-repl-port
+
+# Leiningen
+.lein-deps-sum
+.lein-repl-history
+.lein-plugins/
+.lein-failures
+.nrepl-port
+.rebel_readline_history
+
+# Boot
+.boot/
+boot.properties
+
+# Tools.deps / CLI
+.cpcache/
+
+# ClojureScript
+out/
+resources/public/js/
+figwheel_server.log
+.fighwheel
+.sass-cache
+
+# Shadow CLJS
+.shadow-cljs/
+node_modules/
+
+# Calva (VSCode Clojure extension)
+.calva/
+.clj-kondo/.cache
+
+# LSP and linting
+.lsp/
+.clj-kondo/
+.eastwood
+
+# CIDER (Emacs)
+.cider-repl-history
+.dir-locals.el
+
+# Cursive (IntelliJ)
+.idea/
+*.iml
+.cursive
 
 # VSCode
 .vscode/
-.history/
 
-# IntelliJ IDEA
-.idea/
-*.iml
-out/
-
-# Windsurf
-.windsurf/
-
-# Cursor
-.cursor/
-
-# clj-kondo
-.clj-kondo/
-
-# OS / Editor junk
+# macOS
 .DS_Store
+
+# Windows
 Thumbs.db
+Desktop.ini
+
+# General editor/OS
 *~
 *.swp
 *.swo
 
-# Logs
-*.log
-
-# Clojure test output
-/test-output/
-/coverage/
-/coverage-results/
-
-# ClojureScript
-/.cljs-routes/
-/.shadow-cljs/
-/.cljs-cache/
-
-# REPL history
-.repl-history
-
-# Leiningen profiles
-/profiles.clj
-
-# Jupyter notebooks
-.ipynb_checkpoints/
-
-# Clojure LSP server
-/.lsp/
-
-# Clojure Spec test output
-/.spec-tests/
-
-# ClojureScript build output
-/resources/public/js/compiled/
-
-# Miscellaneous
-*.bak
-*.tmp
+# Task (go-task)
+.task/
+.taskfiles.yaml

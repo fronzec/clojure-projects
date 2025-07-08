@@ -1,7 +1,9 @@
-# Clojure specific
-target/
-.lein-*
-.nrepl-*
+# Clojure build artifacts
+/target/
+/classes/
+/lib/
+/.lein-*
+/.nrepl-*
 pom.xml
 pom.xml.asc
 *.jar
@@ -49,168 +51,25 @@ node_modules/
 .dir-locals.el
 
 # Cursive (IntelliJ)
-.cursive
-
-# macOS
-.DS_Store
-.AppleDouble
-.LSOverride
-Icon
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
-
-# Windows
-Thumbs.db
-Thumbs.db:encryptable
-ehthumbs.db
-ehthumbs_vista.db
-*.tmp
-*.temp
-*.swp
-*.swo
-*~
-
-# Windows shortcuts
-*.lnk
-
-# IntelliJ IDEA
 .idea/
-*.iws
 *.iml
-*.ipr
-out/
-.idea_modules/
-atlassian-ide-plugin.xml
-com_crashlytics_export_strings.xml
-crashlytics.properties
-crashlytics-build.properties
-fabric.properties
+.cursive
 
 # VSCode
 .vscode/
-*.vsix
 
-# Cursor IDE
-.cursor/
-.cursor-settings/
+# macOS
+.DS_Store
 
-# Zed Editor
-.zed/
+# Windows
+Thumbs.db
+Desktop.ini
+
+# General editor/OS
+*~
+*.swp
+*.swo
 
 # Task (go-task)
 .task/
-
-# Sublime Text
-*.sublime-project
-*.sublime-workspace
-
-# Vim
-*.swp
-*.swo
-*~
-.viminfo
-
-# Emacs
-*~
-\#*\#
-.\#*
-.emacs.desktop
-.emacs.desktop.lock
-*.elc
-auto-save-list
-tramp
-.\#*
-
-# Backup files
-*.bak
-*.backup
-*.old
-*.orig
-
-# Log files
-*.log
-logs/
-
-# Temporary files
-tmp/
-temp/
-.tmp/
-
-# Environment variables
-.env
-.env.local
-.env.development
-.env.test
-.env.production
-
-# Database
-*.db
-*.sqlite
-*.sqlite3
-
-# Node.js (for ClojureScript projects)
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.npm
-.yarn/
-
-# Package managers
-package-lock.json
-yarn.lock
-
-# Build outputs
-dist/
-build/
-public/js/compiled/
-
-# OS generated files
-.directory
-.fuse_hidden*
-.nfs*
-
-# JVM crash logs
-hs_err_pid*
-replay_pid*
-
-# Java
-*.class
-*.war
-*.ear
-*.nar
-
-# Gradle (if used)
-.gradle/
-build/
-gradle-app.setting
-!gradle-wrapper.jar
-
-# Maven (if used)
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-.mvn/wrapper/maven-wrapper.jar 
+.taskfiles.yaml

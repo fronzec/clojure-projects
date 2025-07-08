@@ -56,6 +56,7 @@ task setup
 | `task run` | Executes a specific algorithm | To run algorithms with custom namespace |
 | `task run-core` | Shows available algorithms | To see what algorithms are available |
 | `task run-difference` | Runs difference of squares | To test the difference algorithm |
+| `task demo-raindrops` | Demo raindrops algorithm | To see number-to-raindrop conversion |
 | `task setup` | Sets up the project initially | First time you download the project |
 | `task info` | Shows project information | To verify configuration |
 
@@ -165,10 +166,19 @@ learning-clj/
 ├── src/                                    # 📁 Source code
 │   └── learning_clojure/                   # 📦 Main namespace
 │       ├── core.clj                        # 🎯 Main entry point
-│       └── difference_of_squares.clj       # 🧮 Algorithm implementation
+│       ├── complex_numbers.clj             # 🔢 Complex numbers logic
+│       ├── difference_of_squares.clj       # 🧮 Difference of squares algorithm
+│       ├── log_levels.clj                  # 📝 Log levels parsing
+│       ├── raindrops.clj                   # ☁️ Raindrops algorithm
+│       ├── robot_simulator.clj             # 🤖 Robot simulator logic
+│       └── readme-robot-simulator.md       # 📄 Robot simulator docs
 ├── test/                                   # 🧪 Test files
 │   └── learning_clojure/
-│       └── difference_of_squares_test.clj  # ✅ Algorithm tests
+│       ├── complex_numbers_test.clj         # 🔢 Complex numbers tests
+│       ├── difference_of_squares_test.clj   # 🧮 Difference of squares tests
+│       ├── log_levels_test.clj              # 📝 Log levels tests
+│       ├── raindrops_test.clj               # ☁️ Raindrops tests
+│       └── robot_simulator_test.clj         # 🤖 Robot simulator tests
 ├── resources/                              # 📄 Configuration files, data
 └── target/                                 # 📁 Compiled files (auto-generated)
 ```
@@ -212,6 +222,26 @@ learning-clj/
    ```
 
 ### Modifying the Code
+
+#### Raindrops Algorithm Example
+
+The `raindrops` algorithm converts numbers to a string based on their factors:
+- Returns "Pling" if divisible by 3
+- Returns "Plang" if divisible by 5
+- Returns "Plong" if divisible by 7
+- Concatenates if multiple apply, or returns the number as string if none apply.
+
+**Example usage:**
+```clojure
+(learning-clojure.raindrops/convert 28) ;=> "Plong"
+(learning-clojure.raindrops/convert 30) ;=> "PlingPlang"
+(learning-clojure.raindrops/convert 34) ;=> "34"
+```
+
+You can demo this algorithm with:
+```bash
+task demo-raindrops
+```
 
 To change what your program does, edit `test.clj`:
 

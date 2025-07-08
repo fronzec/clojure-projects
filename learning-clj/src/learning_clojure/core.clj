@@ -2,7 +2,8 @@
   (:require [learning-clojure.difference-of-squares :as diff-squares]
             [learning-clojure.complex-numbers :as complex]
             [learning-clojure.robot-simulator :as robot]
-            [learning-clojure.log-levels :as log])
+            [learning-clojure.log-levels :as log]
+            [learning-clojure.raindrops :as raindrops])
   (:gen-class))
 
 (def algorithms
@@ -14,7 +15,9 @@
    :robot-simulator {:ns 'learning-clojure.robot-simulator
                     :description "Robot movement simulation with instructions"}
    :log-levels {:ns 'learning-clojure.log-levels
-               :description "Parse and reformat log lines with different levels"}})
+               :description "Parse and reformat log lines with different levels"}
+   :raindrops {:ns 'learning-clojure.raindrops
+               :description "Convert numbers to raindrop sounds (Pling, Plang, Plong)"}})
 
 (defn list-algorithms
   "List all available algorithms"
@@ -47,6 +50,10 @@
                       (println (format "Level: \"%s\"" (log/log-level log-line)))
                       (println (format "Reformatted: %s" (log/reformat log-line)))
                       (println))))
+    :raindrops (do
+                 (println "Raindrops Demo:")
+                 (doseq [n [1 3 5 7 15 21 35 105 34]]
+                   (println (format "%d → %s" n (raindrops/convert n)))))
     (do
       (println (format "Algorithm '%s' not found." algorithm-name))
       (list-algorithms))))

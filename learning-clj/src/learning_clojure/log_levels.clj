@@ -19,3 +19,8 @@
      with the message first and the log level in parentheses."
   [s]
   (str (message s) " (" (log-level s) ")"))
+
+
+(comment
+  (log-level "[INFO]: Message here")
+  )
