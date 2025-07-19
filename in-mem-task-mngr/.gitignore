@@ -1,0 +1,75 @@
+# Clojure build artifacts
+/target/
+/classes/
+/lib/
+/.lein-*
+/.nrepl-*
+pom.xml
+pom.xml.asc
+*.jar
+*.class
+.cpcache/
+.socket-repl-port
+
+# Leiningen
+.lein-deps-sum
+.lein-repl-history
+.lein-plugins/
+.lein-failures
+.nrepl-port
+.rebel_readline_history
+
+# Boot
+.boot/
+boot.properties
+
+# Tools.deps / CLI
+.cpcache/
+
+# ClojureScript
+out/
+resources/public/js/
+figwheel_server.log
+.fighwheel
+.sass-cache
+
+# Shadow CLJS
+.shadow-cljs/
+node_modules/
+
+# Calva (VSCode Clojure extension)
+.calva/
+.clj-kondo/.cache
+
+# LSP and linting
+.lsp/
+.clj-kondo/
+.eastwood
+
+# CIDER (Emacs)
+.cider-repl-history
+.dir-locals.el
+
+# Cursive (IntelliJ)
+.idea/
+*.iml
+.cursive
+
+# VSCode
+.vscode/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# General editor/OS
+*~
+*.swp
+*.swo
+
+# Task (go-task)
+.task/
+.taskfiles.yaml
