@@ -23,7 +23,7 @@ boot.properties
 
 # Clojure CLI / tools.deps
 .cpcache/
-deps.edn
+
 
 # ClojureScript
 out/
