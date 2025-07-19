@@ -1,6 +1,13 @@
 (ns hello-world.core)
 
-(defn -main
+(defn hello_world
   "Función principal que imprime Hello World."
   []
-  (println "Hello, World!"))
+  (println "Hello, World from repl aaaaa!"))
+
+
+
+(comment
+  (hello_world)
+
+  )
