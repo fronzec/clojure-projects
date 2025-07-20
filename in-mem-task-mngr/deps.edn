@@ -1,1 +1,2 @@
-{:deps {clj-ulid/clj-ulid {:mvn/version "1.0.0"}}}
+{:deps {clj-ulid/clj-ulid {:mvn/version "1.0.0"} ;; https://github.com/theikkila/clj-ulid
+        }}
