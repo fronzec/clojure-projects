@@ -2,10 +2,10 @@
 
 (require '[clj-ulid :as ulid])
 
-; definiendo la variable tasks como un atom de un mapa
+; we are using an atom to store the tasks
 (def tasks (atom {}))
 
-; definiendo la tarea
+; we are using ulid to generate unique ids for the tasks
 {
  :id 1                                                      ; id tarea
  :description "practice clojure"
@@ -15,7 +15,7 @@
  }
 
 
-; definiendo la funcion generate-id
+; we are using ulid to generate unique ids for the tasks
 (defn generate-id
   "Generate the next id for the task using ULID instead of integer or UUID"
   []
@@ -26,11 +26,17 @@
   [task]
   (swap! tasks assoc (generate-id) task))
 
-; definiendo la funcion generate-id
+(defn list-tasks
+  "List all tasks"
+  []
+  ; here we are dereferencing the atom to get the value
+  @tasks)
+
+; we are using ulid to generate unique ids for the tasks
 (comment
-  (println :true)
+
   (print (generate-id))
   (add-task {:description "practice clojure" :status :pending :priority :high :dude-date "2025-07-10"})
-  @tasks
+  (list-tasks)
 
   )
