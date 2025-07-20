@@ -21,7 +21,8 @@
   []
   (ulid/ulid))
 
-(defn add-task
+; usually we use ! to indicate that a function will modify the state
+(defn add-task!
   "Add a new task to the tasks atom"
   [task]
   (swap! tasks assoc (generate-id) task))
@@ -36,7 +37,7 @@
 (comment
 
   (print (generate-id))
-  (add-task {:description "practice clojure" :status :pending :priority :high :dude-date "2025-07-10"})
+  (add-task! {:description "practice clojure" :status :pending :priority :high :dude-date "2025-07-10"})
   (list-tasks)
 
   )
