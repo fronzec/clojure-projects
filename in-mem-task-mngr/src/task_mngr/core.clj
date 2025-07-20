@@ -1,4 +1,4 @@
-(ns todo.core)
+(ns task-mngr.core)
 
 (require '[clj-ulid :as ulid])
 
