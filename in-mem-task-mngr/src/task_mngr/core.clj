@@ -1,4 +1,6 @@
-(ns task-mngr.core)
+(ns task-mngr.core
+  (:require
+   [task-mngr.logic.my-functions :as logic.my-functions]))
 
 (require '[clj-ulid :as ulid])
 
@@ -20,6 +22,12 @@
   "Generate the next id for the task using ULID instead of integer or UUID"
   []
   (ulid/ulid))
+
+(defn say-hello
+  "this function was created only to test REPL reload all namespace and how works with deep dependencies between namespaces functions"
+  [name]
+  (logic.my-functions/my-function2 name)
+  )
 
 ; usually we use ! to indicate that a function will modify the state
 (defn add-task!

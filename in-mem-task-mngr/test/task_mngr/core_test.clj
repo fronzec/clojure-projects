@@ -20,6 +20,11 @@
       (is (= 26 (count id1)) "ULID should be 26 characters long")
       (is (= 26 (count id2)) "ULID should be 26 characters long"))))
 
+(deftest test-say-hello
+  (testing "my function"
+    (let [result (core/say-hello "lalo")]
+      (is (= result "Hello lalo")))))
+
 (deftest test-add-task!
   (testing "add-task! adds a task to the tasks atom"
     (let [task {:description "Test task" :status :pending :priority :high :due-date "2025-08-01"}
